@@ -1,5 +1,6 @@
 import 'package:bara_salfeh/di/score_di.dart';
 import 'package:bara_salfeh/screens/person_type_screen.dart';
+import 'package:bara_salfeh/widgets/data_type_drop_down.dart';
 import 'package:flutter/material.dart';
 
 class AddPersonsScreen extends StatefulWidget {
@@ -49,15 +50,18 @@ class _AddPersonsScreenState extends State<AddPersonsScreen> {
                   ),
                 ),
                 SizedBox(height: 10),
-                Builder(builder: (context) {
-                  return ElevatedButton(
-                      onPressed: () {
-                        context.scoreDi.chooseBaraSalfeh();
-                        context.push(PersonTypeScreen.routeName,
-                            context.scoreDi.scores.randomKey);
-                      },
-                      child: Text('تم'));
-                }),
+                DataTypeDropDown(),
+                SizedBox(height: 10),
+                if (names.isNotEmpty)
+                  Builder(builder: (context) {
+                    return ElevatedButton(
+                        onPressed: () {
+                          context.scoreDi.chooseBaraSalfeh();
+                          context.push(PersonTypeScreen.routeName,
+                              context.scoreDi.scores.randomKey);
+                        },
+                        child: Text('تم'));
+                  }),
                 SizedBox(height: 100),
               ],
             ),

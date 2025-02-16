@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../constants.dart';
 
+// ignore: must_be_immutable
 final class ScoreDi extends InheritedWidget {
   final Map<String, int> scores = {};
 
@@ -46,7 +47,7 @@ final class ScoreDi extends InheritedWidget {
 
   void chooseBaraSalfeh() {
     baraSalfehName = (names..shuffle()).first;
-    salfehAnimal = (List.from(animals)..shuffle()).first;
+    salfehAnimal = (List.from(data)..shuffle()).first;
   }
 
   void chooseWhoAskWho() {

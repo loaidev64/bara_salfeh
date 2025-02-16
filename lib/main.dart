@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScoreDi(
         child: MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
       onGenerateRoute: BaseRouter.onGenerateRoute,
       home: AddPersonsScreen(),

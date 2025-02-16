@@ -14,7 +14,7 @@ class ChooseSalfehScreen extends StatefulWidget {
 }
 
 class _ChooseSalfehScreenState extends State<ChooseSalfehScreen> {
-  late final List<String> _getAnimalNames = (List<String>.from(animals)
+  late final List<String> _getAnimalNames = (List<String>.from(data)
         ..removeWhere((element) => element == context.scoreDi.salfehAnimal)
         ..shuffle())
       .take(6)
@@ -41,11 +41,13 @@ class _ChooseSalfehScreenState extends State<ChooseSalfehScreen> {
                   ElevatedButton(
                     onPressed: () => _choose(name),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: !showRightAnswer
-                          ? Colors.red.shade900
-                          : name == context.scoreDi.salfehAnimal
-                              ? Colors.green
-                              : const Color.fromARGB(255, 255, 17, 0),
+                      side: BorderSide(
+                        color: !showRightAnswer
+                            ? Colors.red.shade900
+                            : name == context.scoreDi.salfehAnimal
+                                ? Colors.green
+                                : const Color.fromARGB(255, 255, 17, 0),
+                      ),
                     ),
                     child: Text(
                       name,
