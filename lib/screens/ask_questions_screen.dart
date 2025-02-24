@@ -35,8 +35,8 @@ class _AskQuestionsScreenState extends State<AskQuestionsScreen> {
               Text(
                 '''
 ${scoreDi.askings[index]} اسأل ${scoreDi.answers[index]} سؤال متعلق
-بالسالفة! اختار سؤالك بعناية حتى اللي
- برا السالفة ما يعرف عن ايش تتكلمون
+بالموضوع! اختار سؤالك بعناية حتى اللي
+ ما بيعرف شو الموضوع ما يعرف عن شو عم تحكو
 ''',
                 style: TextStyle(
                   fontSize: 16,

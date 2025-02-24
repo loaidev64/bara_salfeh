@@ -25,7 +25,7 @@ class _VoteScreenState extends State<VoteScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text('''
-${scoreDi.askings[index]} اختار الشخص اللي تظن انه برا السالفة
+${scoreDi.askings[index]} اختار الشخص اللي تظن انه ما بعرف شو الموضوع
 '''),
                 SizedBox(height: 20),
                 for (final name in List<String>.from(scoreDi.names)

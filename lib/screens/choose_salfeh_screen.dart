@@ -35,7 +35,7 @@ class _ChooseSalfehScreenState extends State<ChooseSalfehScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('''${context.scoreDi.baraSalfehName} ايش هي السالفة؟'''),
+                Text('''${context.scoreDi.baraSalfehName} شو الموضوع؟'''),
                 SizedBox(height: 20),
                 for (final name in _getAnimalNames) ...[
                   ElevatedButton(

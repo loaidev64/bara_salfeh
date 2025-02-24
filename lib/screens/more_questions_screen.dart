@@ -26,9 +26,9 @@ class _MoreQuestionsScreenState extends State<MoreQuestionsScreen> {
               children: [
                 Text(
                   '''
-${scoreDi.askings[index]} اختار الشخص تبغى تسأله أو
- اضغط زر تصويت إذا كنتم جاهزين
-للتصويت على اللي برا السالفة
+${scoreDi.askings[index]} اختار الشخص بدك تسأله أو
+ اضغط زر تصويت إذا كنتو جاهزين
+للتصويت على اللي ما بعرف الموضوع
 ''',
                   textAlign: TextAlign.center,
                 ),

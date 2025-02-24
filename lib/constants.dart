@@ -1,6 +1,26 @@
 DataTypes dataType = DataTypes.animals;
 
-enum DataTypes { animals, arabCountries, fruits, vegetables, sports, desserts }
+enum DataTypes {
+  animals,
+  arabCountries,
+  fruits,
+  vegetables,
+  sports,
+  desserts,
+  cartoonCharacters,
+  famousPeople;
+
+  String get name => switch (this) {
+        DataTypes.animals => 'حيوانات',
+        DataTypes.arabCountries => 'دول عربية',
+        DataTypes.fruits => 'فواكه',
+        DataTypes.vegetables => 'خضراوات',
+        DataTypes.sports => 'رياضة',
+        DataTypes.desserts => 'حلويات',
+        DataTypes.cartoonCharacters => 'شخصيات كرتونية',
+        DataTypes.famousPeople => 'شخصيات مشهورة',
+      };
+}
 
 List<String> get data => [
       if (dataType == DataTypes.animals) ..._animals,
@@ -9,8 +29,9 @@ List<String> get data => [
       if (dataType == DataTypes.vegetables) ..._vegetables,
       if (dataType == DataTypes.sports) ..._sports,
       if (dataType == DataTypes.desserts) ..._desserts,
+      if (dataType == DataTypes.cartoonCharacters) ..._cartoonCharacters,
+      if (dataType == DataTypes.famousPeople) ..._famousPeople,
     ];
-
 const _arabCountries = [
   "🇲🇷 موريتانيا",
   "🇲🇦 المغرب",
@@ -204,4 +225,116 @@ const _sports = [
   "🏋️‍♂️ رفع الأثقال",
   "⛷️ التزلج",
   "🏄‍♂️ ركوب الأمواج",
+];
+
+const _cartoonCharacters = [
+  "ميكي ماوس",
+  "بطوط",
+  "بندق",
+  "توم",
+  "جيري",
+  "سبونج بوب",
+  "بسيط",
+  "ساندي",
+  "شفيق",
+  "مستر سلطع",
+  "باغز باني",
+  "دافي داك",
+  "تويتي",
+  "سيلفستر",
+  "باباي",
+  "سكوبي دو",
+  "وودي وودبيكر",
+  "شريك",
+  "فيونا",
+  "النمر الوردي",
+  "سابق",
+  "لاحق",
+  "لاحق",
+  "كونان",
+  "الرجل الاخضر",
+  "الرجل الحديدي",
+  "كابتن أمريكا",
+  "باتمان",
+  "سبايدرمان",
+  "سوبر مان",
+  "بن تن",
+  "غوكو",
+  "فيجيتا",
+  "سيمبا",
+  "سندباد",
+  "علاء الدين",
+  "ياسمينة",
+  "سونيك",
+  "كابتن ماجد",
+  "بسام",
+  "عدنان",
+  "لينا",
+  "القناع الاخضر",
+  "ماشا",
+  "ماوكلي",
+  "دكستر",
+  "نقار الخشب",
+  "النمر المقنع",
+  "همتارو",
+];
+
+const _famousPeople = [
+  "محمد علي", // Muhammad Ali
+  "ألبرت أينشتاين", // Albert Einstein
+  "مهاتما غاندي", // Mahatma Gandhi
+  "ليونيل ميسي", // Lionel Messi
+  "كريستيانو رونالدو", // Cristiano Ronaldo
+  "مايكل جوردان", // Michael Jordan
+  "ستيف جوبز", // Steve Jobs
+  "بيل غيتس", // Bill Gates
+  "ماريا كوري", // Marie Curie
+  "إسحاق نيوتن", // Isaac Newton
+  "ليوناردو دافنشي", // Leonardo da Vinci
+  "بابلو بيكاسو", // Pablo Picasso
+  "بيتهوفن", // Ludwig van Beethoven
+  "شكسبير", // William Shakespeare
+  "أرسطو", // Aristotle
+  "أفلاطون", // Plato
+  "سقراط", // Socrates
+  "نابليون بونابرت", // Napoleon Bonaparte
+  "أديسون", // Thomas Edison
+  "ستيفن هوكينغ", // Stephen Hawking
+  "بروس لي", // Bruce Lee
+  "جاكي شان", // Jackie Chan
+  "أرنولد شوارزنيجر", // Arnold Schwarzenegger
+  "سيلفستر ستالون", // Sylvester Stallone
+  "توم كروز", // Tom Cruise
+  "براد بيت", // Brad Pitt
+  "ليوناردو دي كابريو", // Leonardo DiCaprio
+  "مايكل جاكسون", // Michael Jackson
+  "أم كلثوم", // Umm Kulthum
+  "فيروز", // Fairuz
+  "عبد الحليم حافظ", // Abdel Halim Hafez
+  "محمد عبد الوهاب", // Mohamed Abdel Wahab
+  "مصطفى محمود", // Mustafa Mahmoud
+  "عمر المختار", // Omar Al-Mukhtar
+  "صلاح الدين الأيوبي", // Saladin
+  "هارون الرشيد", // Harun al-Rashid
+  "ابن سينا", // Avicenna
+  "ابن خلدون", // Ibn Khaldun
+  "الخوارزمي", // Al-Khwarizmi
+  "ابن الهيثم", // Alhazen
+  "جابر بن حيان", // Jabir ibn Hayyan
+  "الرازي", // Al-Razi
+  "ابن بطوطة", // Ibn Battuta
+  "ابن رشد", // Averroes
+  "ابن النفيس", // Ibn al-Nafis
+  "ابن البيطار", // Ibn al-Baitar
+  "ابن ماجد", // Ahmad ibn Majid
+  "ابن عربي", // Ibn Arabi
+  "ابن تيمية", // Ibn Taymiyyah
+  "ابن قيم الجوزية", // Ibn Qayyim al-Jawziyya
+  "ابن حزم", // Ibn Hazm
+  "ابن الجوزي", // Ibn al-Jawzi
+  "ابن عساكر", // Ibn Asakir
+  "ابن كثير", // Ibn Kathir
+  "ابن منظور", // Ibn Manzur
+  "ابن قدامة", // Ibn Qudamah
+  "ابن حجر العسقلاني", // Ibn Hajar al-Asqalani
 ];

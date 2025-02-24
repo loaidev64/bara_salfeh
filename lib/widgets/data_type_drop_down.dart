@@ -21,14 +21,7 @@ class _DataTypeDropDownState extends State<DataTypeDropDown> {
       items: DataTypes.values
           .map((e) => DropdownMenuItem(
                 value: e,
-                child: Text(switch (e) {
-                  DataTypes.animals => 'حيوانات',
-                  DataTypes.arabCountries => 'دول عربية',
-                  DataTypes.fruits => 'فواكه',
-                  DataTypes.vegetables => 'خضراوات',
-                  DataTypes.sports => 'رياضة',
-                  DataTypes.desserts => 'حلويات',
-                }),
+                child: Text(e.name),
               ))
           .toList(),
       onChanged: _onChangeDataType,

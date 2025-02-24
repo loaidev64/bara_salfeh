@@ -1,3 +1,4 @@
+import 'package:bara_salfeh/constants.dart';
 import 'package:bara_salfeh/di/score_di.dart';
 import 'package:bara_salfeh/screens/ask_questions_screen.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +65,7 @@ class _PersonTypeScreenState extends State<PersonTypeScreen> {
             '''
 اعطوا الجوال ل$personName
 اضغط التالي حتى تعرف هل انت 
-برا السالفة أو داخلها ولا تخلي احد غيرك
+بتعرف الموضوع ولا لأ ولا تخلي حدا غيرك
 يشوف الشاشة!
 ''',
             style: TextStyle(
@@ -89,15 +90,15 @@ class _PersonTypeScreenState extends State<PersonTypeScreen> {
           Text(
             personName == context.scoreDi.baraSalfehName
                 ? '''
-انت يلي برا السالفة! حاول تعرف وش
-السالفة بالضبط من كلام البقية أو
- اقنعهم يصوتون على الشخص الخطأ!
- تلميح السالفة عن الحيوانات
+انت يلي ما بتعرف الموضوع! حاول تعرف شو
+الموضوع بالضبط من كلام الباقي أو
+ اقنعهم يصوتو على الشخص الخطأ!
+ تلميح الموضوع عن ${dataType.name}
 '''
                 : '''
-أنت داخل السالفة واللي هي 
+أنت بتعرف الموضوع واللي هو 
 ${context.scoreDi.salfehAnimal}
-هدفك في اللعبة معرفة مين منكم اللي برا السالفة
+هدفك في اللعبة تعرف مين منكم اللي ما بعرف شو الموضوع
 ''',
             style: TextStyle(
               fontSize: 16,

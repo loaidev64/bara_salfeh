@@ -59,7 +59,7 @@ class _BaraSalfehScreenState extends State<BaraSalfehScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('''الشخص يلي برا السالفة هو...'''),
+                Text('''الشخص يلي ما بيعرف شو الموضوع هو...'''),
                 SizedBox(height: 100),
                 Text(
                   personName,
